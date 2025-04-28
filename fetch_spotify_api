@@ -19,7 +19,7 @@ def fetch_recent_tracks_data(limit=50):
 
     # read the .env file (credentials for the api) and save them variables
     load_dotenv()
-    sp_cred = spotipy.Spotify(auth_manage=SpotifyOAuth(
+    sp_cred = spotipy.Spotify(auth_manager=SpotifyOAuth(
         client_id=os.getenv('SPOTIFY_CLIENT_ID'),
         client_secret=os.getenv('SPOTIFY_CLIENT_SECRET'),
         redirect_uri=os.getenv('SPOTIFY_REDIRECT_URI'),
@@ -30,6 +30,7 @@ def fetch_recent_tracks_data(limit=50):
     results = sp_cred.current_user_recently_played(limit=limit)
 
     return results
+### above code works, tested in jupyter notebook ###
 
 def create_track_list(results):
     """
