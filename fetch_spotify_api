@@ -8,13 +8,15 @@ from spotipy.oauth2 import SpotifyOAuth
 
 def fetch_recent_tracks_data(limit=50):
     """
-    Fetches the recently played tracks data from your personal Spotify API.
+    Fetches the recently played tracks data from your personal Spotify API. 
+    Create a tracks_list to use for machine learning models.
+    The list matches the kaggle spotify 30k dataset.
 
     Args: 
         limit (int): Number of tracks to fetch (default is 50).
     
     Returns:
-        results (list): List of track data dictionaries.
+        tracks_list (list): List of track data dictionaries.
     """
 
     # read the .env file (credentials for the api) and save them variables
@@ -28,14 +30,6 @@ def fetch_recent_tracks_data(limit=50):
 
     # fetch recently played tracks (with max limit)
     results = sp_cred.current_user_recently_played(limit=limit)
-
-    return results
-### above code works, tested in jupyter notebook ###
-
-def create_track_list(results):
-    """
-    Creates a list of track data dictionaries from the Spotify API results.
-    """
 
     # get track data from results
     tracks_list = []
@@ -60,7 +54,7 @@ def create_track_list(results):
                 'track_id': track_id,
                 'artists': ', '.join(entry['name'] for entry in track['artists']),
                 'album_name': track['album']['name'],
-                'track_name': track['name'],,
+                'track_name': track['name'],
                 'popularity': track['popularity'],
                 'duration_ms': track['duration_ms'],
                 'explicit': track['explicit'],
@@ -79,12 +73,12 @@ def create_track_list(results):
                 'track_genre': genres[0] if genres else None
             }
 
-            tracks_list.append(track_data)
+        tracks_list.append(track_data)
+        
+        return tracks_list
+## code above DOES NOT WORK for now, test further and adjust in "only_testing_code_snippets" ##
 
-    
-    
-
-
+### all code below still to be tested in jupyter notebook as functions
 
 # check columns and their order with original kaggle 30k spotify dataset
 kaggle_spotify_dataset_columns = ['track_id', 'artists', 'album_name', 'track_name', 'popularity',
