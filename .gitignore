@@ -20,4 +20,4 @@ data/
 .cache
 
 # Jupyer notebooks for local use only
-only_testing_code_snippets.ipynb
+spotify_api_call_only_metadata_possible.ipynb
