@@ -17,6 +17,7 @@ data/
 
 # API related files
 .cache-spotify
+.cache
 
 # Jupyer notebooks for local use only
 only_testing_code_snippets.ipynb
