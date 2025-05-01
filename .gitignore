@@ -19,5 +19,6 @@ data/
 .cache-spotify
 .cache
 
-# Jupyer notebooks for local use only
+# Jupyer notebooks & other stuff for local use only
 spotify_api_call_only_metadata_possible.ipynb
+notes.txt
