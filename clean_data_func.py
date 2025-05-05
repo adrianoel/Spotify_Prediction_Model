@@ -30,6 +30,9 @@ def clean_data(df_input):
                      'liveness', 'valence', 'tempo', 'time_signature'] 
     df = df.drop_duplicates(subset=relevant_cols)
 
+    # adjust feature type (from bool to int, True = 1, False = 0)
+    df['explicit'] = df['explicit'].astype(int)
+
     # Use pd.cut for equal-width bins to categorize popularity
     df['popularity_cat'] = pd.cut(df['popularity'],
                                         bins=[-1, 0, 33, 66, 100],
