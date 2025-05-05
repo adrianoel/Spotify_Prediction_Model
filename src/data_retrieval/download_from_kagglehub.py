@@ -26,4 +26,13 @@ for file_name in files:
     if os.path.isfile(full_file_name):
         shutil.move(full_file_name, data_dir)
 
-print('Files have been moved to the "data" directory.')
+# Define old and new file names
+old_name = "data/dataset.csv"
+new_name = "data/spotify_dataset.csv"
+
+# Rename the file
+os.rename(old_name, new_name)
+
+print('File has been renamed and moved to the "data" directory.')
+
+
