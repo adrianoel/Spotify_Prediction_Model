@@ -13,7 +13,9 @@ def clean_data(df_input):
         df (pd.DataFrame): The cleaned DataFrame with duplicates and NaN values removed.
         
     '''
-    
+    # copy input dataframe first
+    df = df_input.copy()
+
     # remove nan values
     df = df.dropna()
 
