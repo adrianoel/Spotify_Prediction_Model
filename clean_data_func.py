@@ -16,6 +16,10 @@ def clean_data(df_input):
     # copy input dataframe first
     df = df_input.copy()
 
+    # remove unnecessary column if it exists
+    if 'Unnamed: 0' in df.columns:
+        df = df.drop(columns=['Unnamed: 0'])
+
     # remove nan values
     df = df.dropna()
 
