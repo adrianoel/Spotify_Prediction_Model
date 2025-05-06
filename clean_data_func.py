@@ -36,6 +36,6 @@ def clean_data(df_input):
     # Use pd.cut for equal-width bins to categorize popularity
     df['popularity_cat'] = pd.cut(df['popularity'],
                                         bins=[-1, 0, 33, 66, 100],
-                                        labels=['New', 'Low', 'Medium', 'High'])
+                                        labels=['Unknown', 'Low', 'Medium', 'High'])
 
     return df
