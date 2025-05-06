@@ -33,9 +33,9 @@ def clean_data(df_input):
     # adjust feature type (from bool to int, True = 1, False = 0)
     df['explicit'] = df['explicit'].astype(int)
 
-    # Use pd.cut for equal-width bins to categorize popularity
+    # Use pd.cut to categorize popularity into four ranges (unknown = -1-0, low = 1-25, medium = 26-74, high = 75-100)
     df['popularity_cat'] = pd.cut(df['popularity'],
-                                        bins=[-1, 0, 33, 66, 100],
+                                        bins=[-1, 0, 25, 74, 100],
                                         labels=['Unknown', 'Low', 'Medium', 'High'])
 
     return df
