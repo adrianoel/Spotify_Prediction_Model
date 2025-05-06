@@ -8,9 +8,11 @@ def feature_engineer(df_input):
     '''Feature engineering by creating new columns that are more suitable for machine learning models.
     They are derived from categorical columns with too many unique values.
     New features:
-        - artist_popularity: Mean track popularity per artist (by grouping 'artists' and 'popularity')
-        - album_popularity: Mean track popularity per album (by grouping 'album' and 'popularity')
+        - tracks_per_artist: Getting count frequency of 'artists' per track_id
+        - tracks_per_album: Getting count frequency of 'album_name' per track_id
+        - tracks_per_genre: Getting count frequency of 'track_genre' per track_id
         - track_name_length: Length of the track name (by getting the length of the strings in 'track_name')
+        - album_name_length: Length of the album name (by getting the length of the strings in 'album_name')
 
     Args:
         df_input (pd.DataFrame): The (cleaned) input DataFrame to feature engineer.
@@ -24,16 +26,13 @@ def feature_engineer(df_input):
     # copy input dataframe first
     df = df_input.copy()
 
-    # create artist_popularity feature
-    artist_popularity = df.groupby('artists')['popularity'].mean().to_dict()
-    df['artist_popularity'] = df['artists'].map(artist_popularity)
-
-    # create album_popularity feature
-    album_popularity = df.groupby('album_name')['popularity'].mean().to_dict()
-    df['album_popularity'] = df['album_name'].map(album_popularity)
-    
+    # create tracks_per_artist feature
+    df['tracks_per_artist'] = df.groupby('artists')['track_id'].transform('count')
 
     # create track_name_length feature
     df['track_name_length'] = df['track_name'].str.len()
+
+    # create album_name_length feature
+    df['album_name_length'] = df['album_name'].str.len()
 
     return df
