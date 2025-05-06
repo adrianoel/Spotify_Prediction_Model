@@ -20,6 +20,7 @@ def feature_engineer(df_input):
         df (pd.DataFrame): The engineered DataFrame with the new features as columns.
         
     '''
+
     # copy input dataframe first
     df = df_input.copy()
 
@@ -28,7 +29,7 @@ def feature_engineer(df_input):
     df['artist_popularity'] = df['artists'].map(artist_popularity)
 
     # create album_popularity feature
-    album_popularity = df.groupby('album_name')['album_name'].mean().to_dict()
+    album_popularity = df.groupby('album_name')['popularity'].mean().to_dict()
     df['album_popularity'] = df['album_name'].map(album_popularity)
     
 
