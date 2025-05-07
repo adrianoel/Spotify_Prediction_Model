@@ -6,6 +6,9 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 ##################################
 def clean_data(df_input):
@@ -150,6 +153,7 @@ def pipeline_classifier(cat_cols, num_cols, classifier, **classifier_kwargs):
         cat_cols (list): List of categorical columns from features_train for one-hot-encoding.
         num_cols (list): List of numerical columns from features_train.
         classifier (class): Model class to try out in the pipeline.
+        **classifier_kwargs (model parameters): Individual model parameters to add as keyword arguments.
     
     Returns:
         pipeline (Class): Final Pipeline of chosen model.
