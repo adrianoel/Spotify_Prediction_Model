@@ -4,7 +4,6 @@
 # The last function computes the pipeline with included preprocessing, to quickly try out different models in a notebook
 
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
