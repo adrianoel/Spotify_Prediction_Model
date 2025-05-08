@@ -329,20 +329,20 @@ if __name__ == "__main__":
     # plot 1
     print("create popularity categories bar plot of cleaned data")
     fig = plot_popularity_cat_bars(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_distribution_of_popularity_categories.svg'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_distribution_of_popularity_categories.svg', bbox_inches='tight'))
 
     # plot 2
     print("create positive correlation barplots focused on popularity")
     fig = plot_popularity_correlation_positive(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_positive_correlations_with_popularity.svg'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_positive_correlations_with_popularity.svg', bbox_inches='tight'))
     
     # plot 3
     print("create negative correlation barplots focused on popularity")
     fig = plot_popularity_correlation_negative(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_negative_correlations_with_popularity.svg'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_negative_correlations_with_popularity.svg', bbox_inches='tight'))
 
     # plot 4
     print("show top 15 feature importances of final model")
     fig = plot_feature_importances_final_model(df_feature_importances, 10)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_feature_importances_final_model.svg'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_feature_importances_final_model.svg', bbox_inches='tight'))
 
