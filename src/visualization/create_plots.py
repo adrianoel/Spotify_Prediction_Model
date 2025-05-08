@@ -145,9 +145,9 @@ def plot_popularity_cat_bars(data):
     )
 
     # additional configurations
-    ax.set_title('Target (multiclass): Popularity Categories', pad=20)
+    ax.set_title('Popularity Categories', pad=20)
     ax.set_ylabel('Datapoints', labelpad=15)
-    ax.set_xlabel('Popularity categories', labelpad=15)
+    ax.set_xlabel('', labelpad=15)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     
@@ -162,7 +162,7 @@ def plot_popularity_correlation_positive(data):
     fig, ax = plt.subplots(
         ncols=1,
         nrows=1,
-        figsize=FIGSIZE_LARGE,
+        figsize=FIGSIZE_SMALL,
         dpi=DPI,
     )
     
@@ -189,9 +189,9 @@ def plot_popularity_correlation_positive(data):
     )
 
     # additional configurations
-    ax.set_title('Positive correlations with Popularity', pad=20)
-    ax.set_xlabel('Correlation')
-    ax.set_ylabel('Feature')
+    ax.set_title('Positive correlation with Popularity', pad=20)
+    ax.set_xlabel('')
+    ax.set_ylabel('')
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
@@ -206,7 +206,7 @@ def plot_popularity_correlation_negative(data):
     fig, ax = plt.subplots(
         ncols=1,
         nrows=1,
-        figsize=FIGSIZE_LARGE,
+        figsize=FIGSIZE_LAFIGSIZE_SMALLRGE,
         dpi=DPI,
     )
 
@@ -233,9 +233,9 @@ def plot_popularity_correlation_negative(data):
     )
     
     # additional configurations
-    ax.set_title('Positive correlations with Popularity', pad=20)
-    ax.set_xlabel('Correlation')
-    ax.set_ylabel('Feature label')
+    ax.set_title('Negative correlation with Popularity', pad=20)
+    ax.set_xlabel('')
+    ax.set_ylabel('')
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
