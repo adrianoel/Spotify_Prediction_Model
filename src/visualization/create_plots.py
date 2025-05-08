@@ -68,7 +68,8 @@ LABEL_MAP= {
     'liveness': 'Liveness',
     'tempo': 'Tempo (BPM)',
     'time_signature': 'Time Sig. (Beats per bar)',
-    'tracK_genre': 'Genre',
+    'track_genre': 'Genre',
+    'mode': 'Tonality/Mode'
 }
 
 # %% plot style
