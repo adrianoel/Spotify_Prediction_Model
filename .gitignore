@@ -19,6 +19,14 @@ data/
 .cache-spotify
 .cache
 
+# contents in plots folder (but not .gitkeep to keep folder)
+plots/*
+!plots/.gitkeep
+
+# contents in classification_reports folder (but not .gitkeep to keep folder)
+classification_reports/*
+!classification_reports/.gitkeep
+
 # Jupyer notebooks & other stuff for local use only
 spotify_api_call_only_metadata_possible.ipynb
 
