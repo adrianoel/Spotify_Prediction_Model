@@ -8,6 +8,7 @@ In diesem Projekt geht es um die Frage:
 - [Voraussetzungen](#voraussetzungen)
 - 
 - 
+-
 
 ---
 
@@ -38,6 +39,8 @@ Spotify_Prediction_Model/
     └── __init__.py
 ├── plots/
     └── .gitkeep
+├── presentation_slides_short/
+    └── Spotify_Prediction_Model_Präsentation
 ├── tests/
 ├── .gitignore
 ├── .python-version
@@ -62,7 +65,8 @@ Spotify_Prediction_Model/
     - **`src/data_retrieval/`**: Ordner für Skripte zum Erstellen von ausgewählten Plots zur Visualisierung.
     - **`src/__init__.py`**: Initialisiert den src/ Ordner und dessen Skripte.
 - **`plots/`**: Ordner für die durch das Skript erstellten Plots.
- **`tests/`**: Ordner für Funktionstests der Skripte im Projekt. (noch zu implementieren)
+- **`presentation_slides_short/`**: Ordner für die reduzierte Abschlusspräsentation des Projekts.
+- **`tests/`**: Ordner für Funktionstests der Skripte im Projekt. (noch zu implementieren)
 - **`.gitignore`**: Definiert, welche Dateien von der Versionskontrolle ausgeschlossen werden.
 - **`.python-version`**: Spezifiziert die Python-Version (>=3.13).
 - **`EDA.ipynb`**: Jupyter Notebook für die explorative Datenanalyse.
@@ -78,3 +82,9 @@ Spotify_Prediction_Model/
 ## Voraussetzungen
 
 (to be continued)
+
+
+
+....
+
+## Projektergebnisse (am Schluss) / Fazit
