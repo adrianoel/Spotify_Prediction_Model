@@ -1,4 +1,4 @@
-# Spotify Prediction Model (in German)
+# Spotify Prediction Model (Deutsch)
 In diesem Abschlussprojekt geht es um die Frage:  
 **"Wie gut lässt sich die Beliebtheit eines Songs auf Spotify mithilfe eines Machine-Learning-Modells vorhersagen?"** 
 
