@@ -4,12 +4,17 @@
 # %% setup
 
 #importing modules
-import os
+import os, sys
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 
 from sklearn.model_selection import train_test_split
+
+# get path to main directory to import the pipeline function properly
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
 from src.data_prep_for_model import clean_data, feature_engineer, prep_data_for_model, pipeline_classifier
 from src.final_model import final_pipeline, get_feature_importances
@@ -207,7 +212,7 @@ def plot_popularity_correlation_negative(data):
     fig, ax = plt.subplots(
         ncols=1,
         nrows=1,
-        figsize=FIGSIZE_LAFIGSIZE_SMALLRGE,
+        figsize=FIGSIZE_SMALL,
         dpi=DPI,
     )
 
@@ -330,20 +335,20 @@ if __name__ == "__main__":
     # plot 1
     print("create popularity categories bar plot of cleaned data")
     fig = plot_popularity_cat_bars(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_distribution_of_popularity_categories.svg', bbox_inches='tight'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_distribution_of_popularity_categories.svg'), bbox_inches='tight')
 
     # plot 2
     print("create positive correlation barplots focused on popularity")
     fig = plot_popularity_correlation_positive(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_positive_correlations_with_popularity.svg', bbox_inches='tight'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_positive_correlations_with_popularity.svg'), bbox_inches='tight')
     
     # plot 3
     print("create negative correlation barplots focused on popularity")
     fig = plot_popularity_correlation_negative(data_clean)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_negative_correlations_with_popularity.svg', bbox_inches='tight'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_negative_correlations_with_popularity.svg'), bbox_inches='tight')
 
     # plot 4
     print("show top 15 feature importances of final model")
     fig = plot_feature_importances_final_model(df_feature_importances, 10)
-    fig.savefig(os.path.join(get_plots_dir(), 'plot_feature_importances_final_model.svg', bbox_inches='tight'))
+    fig.savefig(os.path.join(get_plots_dir(), 'plot_feature_importances_final_model.svg'), bbox_inches='tight')
 
