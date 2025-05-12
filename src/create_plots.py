@@ -11,8 +11,8 @@ import seaborn as sns
 
 from sklearn.model_selection import train_test_split
 
-from src.features.data_prep_for_model import clean_data, feature_engineer, prep_data_for_model, pipeline_classifier
-from src.models.final_model import final_pipeline, get_feature_importances
+from src.data_prep_for_model import clean_data, feature_engineer, prep_data_for_model, pipeline_classifier
+from src.final_model import final_pipeline, get_feature_importances
 
 # global constants
 DPI = 100

@@ -28,14 +28,10 @@ Spotify_Prediction_Model/
     └── simple_model_classification_report.csv
 ├── data/
 ├── src/
-    └── data_retrieval/
-        └── download_from_kagglehub.py
-    └── features/
-        └── data_prep_for_model.py
-    └── models/
-        └── final_model.py
-    └── visualization/
-        └── create_plots.py
+    └── download_from_kagglehub.py
+    └── data_prep_for_model.py
+    └── final_model.py
+    └── create_plots.py
     └── __init__.py
 ├── plots/
     └── .gitkeep
@@ -59,10 +55,10 @@ Spotify_Prediction_Model/
 - **`.classification_reports/`**: Classification reports der genutzten Modelle im Laufe des Projekts zum Betrachten und Vergleichen.
 - **`data/`**: Ordner für den heruntergeladenen Datensatz.
 - **`src/`**: Ordner für die genutzten Skripte:
-    - **`src/data_retrieval/`**: Ordner für Skripte zum Erhalten und Speichern von Datensätzen im data/ Ordner.
-    - **`src/data_retrieval/`**: Ordner für Skripte für die Datenbereinigung, das Feature Engineering und die Datenvorbereitung sowie der Pipeline eines Modells.
-    - **`src/data_retrieval/`**: Ordner für Skripte zum finalen Modell.
-    - **`src/data_retrieval/`**: Ordner für Skripte zum Erstellen von ausgewählten Plots zur Visualisierung.
+    - **`src/download_from_kagglehub.py`**: Skript zum Erhalten und Speichern von Datensätzen im data/ Ordner.
+    - **`src/data_prep_for_model.py`**: Skript für die Datenbereinigung, das Feature Engineering und die Datenvorbereitung sowie der Pipeline eines Modells.
+    - **`src/final_model.py`**: Skript zum finalen Modell.
+    - **`src/create_plots.py`**: Skript zum Erstellen von ausgewählten Plots zur Visualisierung.
     - **`src/__init__.py`**: Initialisiert den src/ Ordner und dessen Skripte.
 - **`plots/`**: Ordner für die durch das Skript erstellten Plots.
 - **`presentation_slides_short/`**: Ordner für die reduzierte Abschlusspräsentation des Projekts.
