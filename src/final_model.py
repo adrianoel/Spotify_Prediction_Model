@@ -15,8 +15,6 @@ def final_pipeline(num_cols, cat_cols):
     Args:
         cat_cols (list): List of categorical columns from features_train for one-hot-encoding.
         num_cols (list): List of numerical columns from features_train.
-        classifier (class): Model class to try out in the pipeline.
-        **classifier_kwargs (model parameters): Individual model parameters to add as keyword arguments.
     
     Returns:
         pipeline (Class): Final Pipeline of chosen model.

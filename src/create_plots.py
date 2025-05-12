@@ -294,8 +294,8 @@ def get_plots_dir(subfolder='plots'):
     Returns:
         str: Absolute path to the plots folder.
     """
-    # resolve path to main project directory (2 levels up from this script)
-    main_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    # resolve path to main project directory (1 level up from this script)
+    main_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
     # full path to desired plots folder
     plots_dir = os.path.join(main_dir, subfolder)
