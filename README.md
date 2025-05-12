@@ -10,7 +10,7 @@ In diesem Abschlussprojekt geht es um die Frage:
 - [Explorative Datenanalyse (EDA)](#explorative-datenanalyse-eda)
 - [Feature Engineering, Modellierung und Visualisierung](#feature-engineering-modellierung-und-visualisierung)
 - [Hyperparameter-Optimierung](#hyperparameter-optimierung)
-- [Testen (work in progress)](#testen-work-in-progress)
+- [Testen](#testen)
 - [Verwendete Technologien und Bibliotheken](#verwendete-technologien-und-bibliotheken)
 - [Fazit](#fazit)
 
@@ -42,6 +42,7 @@ Spotify_Prediction_Model/
 ├── presentation_slides_short/
     └── Spotify_Prediction_Model_Präsentation
 ├── tests/
+   └── test_final_model.py
 ├── .gitignore
 ├── .python-version
 ├── EDA.ipynb
@@ -66,7 +67,7 @@ Spotify_Prediction_Model/
     - **`src/__init__.py`**: Initialisiert den src/ Ordner und dessen Skripte.
 - **`plots/`**: Ordner für die durch das Skript erstellten Plots.
 - **`presentation_slides_short/`**: Ordner für die reduzierte Abschlusspräsentation des Projekts.
-- **`tests/`**: Ordner für Funktionstests der Skripte im Projekt. (noch zu implementieren)
+- **`tests/`**: Ordner für Funktionstests des Skripts zum finalen Modell.
 - **`.gitignore`**: Definiert, welche Dateien von der Versionskontrolle ausgeschlossen werden.
 - **`.python-version`**: Spezifiziert die Python-Version (>=3.13).
 - **`EDA.ipynb`**: Jupyter Notebook für die explorative Datenanalyse.
@@ -176,16 +177,16 @@ DAs Notebook `EDA.ipynb` in VS Code oder Jupyter öffnen und ausführen, um eine
 - **`FinalBaseModel.ipynb`**: Testet ausgewählte Modelle, vergleicht diese und schließt mit dem final gewählten Modell ab, das die optimalen Hyperparameter enthält.
 - **`FinalVisualizations.ipynb`**: Erstellt ausgewählte Plots bzw. Visualisierungen, die im plots/ Ordner abgespeichert werden.
 
-## Testen (work in progress)
+## Testen
 
-- **`test_pipelines.py`**: Enthält Tests für die Pipeline-Funktionen unter Verwendung von pytest.
+- **`test_final_model.py`**: Enthält Tests für die Pipeline-Funktionen des finalen Modells unter Verwendung von pytest.
 - **Tests ausführen**:
 
   ```bash
   uv run -m pytest
   ```
 
-  Dies führt die Tests aus und stellt sicher, dass die Skripte korrekt funktionieren.
+  Dies führt die Tests aus und stellt sicher, dass das Skript korrekt funktioniert.
 
 ## Verwendete Technologien und Bibliotheken
 
