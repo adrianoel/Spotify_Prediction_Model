@@ -1,5 +1,5 @@
-# This script represents the final model chosen for this dataset
-# it includes the whole process of cleaning the data, feature engineering, preprocessing and model training
+# This script represents the final model chosen for this dataset as a pipeline with preprocessor
+# There is also a function that gets the feature_importances of the pipeline
 
 import pandas as pd
 import numpy as np
